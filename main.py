@@ -28,7 +28,7 @@ def main():
    
     youtube_url = st.text_input("Enter YouTube video URL:")
 
-    if st.button("Download Audio and Transcribe"):
+    if st.button("Download Video and Summarize"):
         docs = transcribe_audio(youtube_url)
         chain = load_summarize_chain(model, chain_type="map_reduce", verbose=True)
         output = chain.run(docs)
