@@ -12,3 +12,9 @@ Building a RAG application
 
 4. Run the app 
    streamlit run main.py 
+
+5. User input 
+    You tube video url : https://www.youtube.com/watch?v=G2fqAlgmoPo
+
+
+

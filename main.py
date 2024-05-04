@@ -24,18 +24,16 @@ def transcribe_audio(youtube_url):
 
 
 def main():
-    st.title("Extract you tube video information")
+    st.title("Chat with you tube video")
    
     youtube_url = st.text_input("Enter YouTube video URL:")
 
-    if st.button("Download Video and Summarize"):
+    if st.button("Summarize video"):
         docs = transcribe_audio(youtube_url)
         chain = load_summarize_chain(model, chain_type="map_reduce", verbose=True)
         output = chain.run(docs)
+        st.write(f"Summarize video: {output}")
 
-        with st.beta_container():
-            st.header("Model Output")
-            st.write(output)
 
    
 if __name__ == "__main__":
